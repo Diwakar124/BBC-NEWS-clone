@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC NEWS CLONE</title>
+    <style type="text/css">
+        #topbar {
+            width: 100% auto;
+            margin: 0 auto;
+            height: 40px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        #Logo {
+            margin-top: 8px;
+            width: 100px;
+            float: left;
+            margin-right: 8px;
+            padding-left: 90px;
+
+        }
+
+        .topbar-section {
+
+            float: left;
+            border-left: 1px #cccccc solid;
+            height: 100%;
+        }
+
+        .topbar-section a {
+            color: black;
+            text-decoration: none;
+            position: relative
+        }
+
+        .topbar-section a:hover {
+
+            text-decoration: underline 2px solid rgb(230, 13, 143);
+
+        }
+
+
+        #signin-image {
+            width: 22px;
+            margin: 9px 9px;
+            float: left;
+        }
+
+        #signin-text {
+            font-weight: bold;
+            font-size: 100%;
+            position: relative;
+            top: 9px;
+        }
+
+        #wigglyline {
+            float: left;
+            height: 40px;
+            margin: 0px 30px;
+
+        }
+
+        #bell {
+            height: 25px;
+            margin: 9px -31px;
+
+            float: left;
+        }
+
+        .topbar-menu {
+
+            font-weight: bold;
+            font-size: 90%;
+            padding: 13px 15px 0 15px;
+            height: 27px;
+        }
+
+        #more-arrow {
+            height: 8px;
+        }
+
+        #search-box {
+            background-color: #e4e4e4;
+            border: none;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 5px;
+            margin: 5px 0 5px 5px;
+            float: left;
+        }
+
+        #magnifying-glass {
+            background-color: #e4e4e4;
+            height: 27px;
+            margin-top: 5px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #menu-bar-container {
+            border-top: 1px solid #cccccc;
+            background-color: #bb1919;
+            width: 100%;
+            height: 70px;
+
+        }
+
+        #menu-bar {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            padding: 85px;
+            margin: 0;
+            color: white;
+            font-size: 40px;
+            font-weight: normal;
+            padding-top: 10px;
+            float: left;
+        }
+
+        #local-news {
+            border:  1.5px rgb(230, 230, 223) solid;
+            float: right;
+            width: 140px;
+            margin: 14px 10px ;
+
+        }
+
+        #local-news a {
+            color: white;
+            text-decoration: none;
+            position: relative top -85px;
+
+
+        }
+
+        #local-news a:hover {
+            text-decoration: underline 1.5px solid yellow;
+
+        }
+
+        #local-news img {
+            /* background-color: #bb1919; */
+            height: 30px;
+        }
+
+        #menu-bar-2-container {
+            background-color: #a91717;
+            width: 100%;
+
+        }
+
+        #menu-bar-2 {
+            width: 100%;
+            margin: -75px auto;
+            height: 45px;
+
+        }
+
+        #menu-bar-2 a {
+            color: white;
+            text-decoration: none;
+
+            padding: 8px;
+            padding-right: 10px;
+            border-right: 1px solid #bb4545;
+            font-size: 14px;
+            position: relative;
+            top: 12px;
+
+
+        }
+
+        #menu-bar-2 a:hover {
+            text-decoration: underline 2px solid rgb(226, 226, 232);
+
+        }
+
+        .no-border {
+            border: none !important;
+        }
+
+        #drop {
+            height: 6px;
+            position: relative;
+            top: 9px;
+            margin: 0 -8px;
+        }
+
+        #display {
+            height: 260px;
+            margin: 40px 260px;
+            position: relative;
+            float: right;
+        }
+
+    
+
+        .h1 {
+            margin-left: 10px 50px;
+        }
+
+        .two {
+            margin: 72px 25px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="topbar">
+        <img id="Logo" src="LOGO.jpeg" alt="">
+        <div id="signin-div" class="topbar-section">
+            <img id="signin-image" src="signin.jpeg" alt="">
+            <a href="https://account.bbc.com/signin?realm=%2F&clientId=Account&context=news&ptrt=https%3A%2F%2Fwww.bbc.com%2Fnews&userOrigin=news_gnl&isCasso=false&action=sign-in&redirectUri=https%3A%2F%2Fsession.bbc.com%2Fsession%2Fcallback%3Frealm%3D%2F&service=IdSignInService&nonce=rfUGSjbM-2Z3USCMYYeiNLoPv-67Y3ptPaG0"
+                id="signin-text">sign-in</a>
+            <!-- <span id="signin-text">sign in</span>  -->
+        </div>
+        <div id="bell-div">
+            <img id="wigglyline" src="wigglyline.jpeg" alt="">
+            <img id="bell" src="bell.png" alt="">
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.com/news">Home</a>
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.com/news">News</a>
+        </div>
+
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.com/sport">sport</a>
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.com/reel">Reel</a>
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.com/worklife">worklife</a>
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.com/future">future</a>
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.com/culture">culture</a>
+        </div>
+
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.com/weather">weather</a>
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.co.uk/sounds">sounds</a>
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.co.uk/schedules/p00fzl9m">TV</a>
+
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.com/travel">travel</a>
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="https://www.bbc.com/news/the_reporters"> More</a>
+       
+
+            <img id="more-arrow" src="more arrow.png" alt="">
+        </div>
+        <div class="topbar-section">
+           <a href="https://www.bbc.co.uk/search?d=SEARCH_PS"> <input id="search-box" type="text" value="search BBC"></a>
+
+            <input type="image" id="magnifying-glass" src="search.png" alt="">
+        </div>
+        
+
+        <div class="clear"></div>
+        <div id="menu-bar-container">
+            <div id=" menu-bar">
+                <a href="https://www.bbc.com/news ">
+                    <h1>NEWS</h1>
+                </a>
+                <div id="local-news">
+                    <a href="">Find local news</a>
+                    <img class="location" src="location.jpeg" alt="">
+
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="menu-bar-2-container">
+                <div id="menu-bar-2">
+
+                    <a href="https://www.bbc.com/news">Home</a>
+                    <a href="https://www.bbc.com/news/uk">UK</a>
+                    <a href="https://www.bbc.com/news/world-60525350">War in Ukrane</a>
+                    <a href="https://www.bbc.com/news/coronavirus">Coronavirus</a>
+                    <a href="https://www.bbc.com/news/science-environment-56837908">Climate</a>
+                    <a href="https://www.bbc.com/news/business">Business</a>
+                    <a href="https://www.bbc.com/news/stories">Stories</a>
+                    <a href="https://www.bbc.com/news/technology">Tech</a>
+                    <a href="https://www.bbc.com/news/science_and_environment">Science</a>
+                    <a href="https://www.bbc.com/news/health">Health</a>
+                    <a href="https://www.bbc.com/news/world/asia">Asia</a>
+                    <a href="https://www.bbc.com/news/entertainment_and_arts">Entertainment & Arts</a>
+                    <a href="https://www.bbc.com/news/av/10462520">Video & Audio</a>
+                    <a href=" https://www.bbc.com/news/world_radio_and_tv">World News TV</a>
+
+                    <a href="https://www.bbc.com/news/reality_check " class="no-border">More</a>
+                    <img id="drop" src="drop.jpeg" alt="">
+
+                    <img id="display" src="display img.jpeg" alt="">
+                    <img class="h1" src="h1.jpeg" alt="">
+                    <img class="two" src="2..jpeg " alt="">
+                    <img src="c1.jpeg" alt="">
+                    <img src="c2.jpeg" alt="">
+                    <img src="c3.jpeg" alt="">
+                    <img src="c4.jpeg" alt="">
+                    <img src="c5.jpeg" alt="">
+                    <img src="c6.jpeg" alt="">
+                    <img src="c7.jpeg" alt="">
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
